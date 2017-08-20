@@ -9,16 +9,9 @@
   "peerDependencies": {
     "@mapbox/mapbox-gl-draw": "^1.0.0",
     "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-mapbox-gl": "^2.2.0"
+    "react": "^15.6.1"
   },
   "devDependencies": {
-    "@mapbox/mapbox-gl-draw": "^1.0.0",
-    "eslint": "^4.5.0",
-    "mapbox-gl": "^0.39.1",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-mapbox-gl": "^2.2.0"
+    "eslint": "^4.5.0"
   }
 }
