@@ -37,23 +37,3 @@ DrawControl.propTypes = {
   modes: PropTypes.object, // eslint-disable-line
   default_mode: PropTypes.string,
 };
-
-DrawControl.defaultProps = {
-  keybindings: true,
-  touchEnabled: true,
-  boxSelect: true,
-  clickBuffer: 2,
-  touchBuffer: 25,
-  controls: {
-    point: true,
-    line_string: true,
-    polygon: true,
-    trash: true,
-    combine_features: true,
-    uncombine_features: true,
-  },
-  displayControlsDefault: true,
-  styles: [],
-  modes: {},
-  default_mode: 'simple_select',
-};
