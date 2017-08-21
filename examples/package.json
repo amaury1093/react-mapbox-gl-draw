@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@mapbox/mapbox-gl-draw": "^1.0.0",
     "mapbox-gl": "^0.39.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

@@ -1,8 +1,10 @@
 import React from 'react';
-import ReactMapboxGl, { FeatureGroup } from 'react-mapbox-gl';
-
+import ReactMapboxGl from 'react-mapbox-gl';
+import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
+import DrawControl from '../../';
 import logo from './logo.svg';
 import './App.css';
+
 
 const App = () => {
   const Map = ReactMapboxGl({
@@ -19,9 +21,7 @@ const App = () => {
         style="mapbox://styles/mapbox/outdoors-v9" // eslint-disable-line
         containerStyle={{ height: '400px', width: '100vw' }}
       >
-        {/* <DrawControl
-        controls={{ point: false, line_string: false, combine_features: false, uncombine_features: false }}
-        /> */}
+        <DrawControl />
       </Map>
     </div>
   );
