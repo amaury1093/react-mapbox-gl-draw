@@ -2,16 +2,33 @@
   "name": "react-mapbox-gl-draw",
   "version": "1.0.0",
   "description": "Draw tools for Mapbox with React: react-mapbox-gl + mapbox-gl-draw",
-  "main": "src/index.js",
+  "main": "lib/",
   "repository": "https://github.com/amaurymartiny/react-mapbox-gl-draw",
   "author": "Amaury Martiny",
   "license": "MIT",
+  "scripts": {
+    "compile": "rimraf lib/ && babel -d lib/ src/",
+    "watch": "babel --watch -d lib/ src/",
+    "lint": "eslint src/**/*.js test/**/*.js --fix",
+    "start": "npm run compile && node example/app"
+  },
   "peerDependencies": {
     "@mapbox/mapbox-gl-draw": "^1.0.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1"
   },
   "devDependencies": {
-    "eslint": "^4.5.0"
-  }
+    "@mapbox/mapbox-gl-draw": "^1.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "5.*",
+    "eslint-plugin-react": "^7.3.0",
+    "react": "^15.6.1",
+    "rimraf": "^2.6.1"
+  },
+  "dependencies": {}
 }
