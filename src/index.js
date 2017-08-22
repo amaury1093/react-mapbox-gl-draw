@@ -4,9 +4,12 @@ import MapboxDraw from '@mapbox/mapbox-gl-draw';
 
 export default class DrawControl extends React.Component {
   componentWillMount() {
-    const { map } = this.context;
-    const Draw = new MapboxDraw(this.props);
-    map.addControl(Draw);
+    this.draw = new MapboxDraw(this.props);
+    this.context.map.addControl(this.draw);
+  }
+
+  componentWillUnmount() {
+    this.context.map.removeControl(this.draw);
   }
 
   render() {
