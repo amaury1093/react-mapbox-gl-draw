@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "compile": "rimraf lib/ && babel -d lib/ src/",
+    "build": "npm run compile",
     "watch": "babel --watch -d lib/ src/",
     "lint": "eslint src/**/*.js test/**/*.js --fix",
     "start": "npm run compile && node example/app",
