@@ -10,7 +10,7 @@ npm install react-mapbox-gl mapbox-gl @mapbox/mapbox-gl-draw --save
 npm install react-mapbox-gl-draw --save
 ```
 
-```js
+```javascript
 import ReactMapboxGl from 'react-mapbox-gl';
 import DrawControl from 'react-mapbox-gl-draw';
 
@@ -47,6 +47,26 @@ Here are the props you can pass to `<DrawControl>`:
 - `defaultMode`, String (default: `'simple_select'`): the mode (from `modes`) that user will first land in.
 
 To learn more about `mapbox-gl-draw`: https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/API.md
+
+To access the [Draw object](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/API.md#api-methods) with all the API methods, you need to define a [ref](https://facebook.github.io/react/docs/refs-and-the-dom.html) on the `<DrawControl>` component, and the Draw object will be in the `draw` field of this ref:
+
+```javascript
+<Map
+  style="mapbox://styles/mapbox/streets-v9"
+  containerStyle={{
+    height: '100vh',
+    width: '100vw'
+  }}>
+    <DrawControl
+      ref={(drawControl) => { this.drawControl = drawControl; }}
+    />
+</Map>
+
+//...
+handleButtonClick() {
+  this.drawControl.draw.getAll(); // Or any other API method
+}
+```
 
 ## Example
 
