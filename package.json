@@ -1,6 +1,6 @@
 {
   "name": "react-mapbox-gl-draw",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Draw tools for Mapbox with React: react-mapbox-gl + mapbox-gl-draw",
   "main": "lib/",
   "repository": "https://github.com/amaurymartiny/react-mapbox-gl-draw",
