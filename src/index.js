@@ -9,6 +9,9 @@ export default class DrawControl extends React.Component {
   }
 
   componentWillUnmount() {
+    if (!this.context.map || !this.context.map.getStyle()) {
+      return;
+    }
     this.context.map.removeControl(this.draw);
   }
 

@@ -5,12 +5,11 @@ import DrawControl from '../../';
 import logo from './logo.svg';
 import './App.css';
 
+const Map = ReactMapboxGl({
+  accessToken: 'pk.eyJ1IjoiYWxleDMxNjUiLCJhIjoiY2o0MHp2cGtiMGFrajMycG5nbzBuY2pjaiJ9.QDApU0XH2v35viSwQuln5w',
+});
 
 const App = () => {
-  const Map = ReactMapboxGl({
-    accessToken: 'pk.eyJ1IjoiYWxleDMxNjUiLCJhIjoiY2o0MHp2cGtiMGFrajMycG5nbzBuY2pjaiJ9.QDApU0XH2v35viSwQuln5w',
-  });
-
   return (
     <div className="App">
       <div className="App-header">
