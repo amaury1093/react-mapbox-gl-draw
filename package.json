@@ -11,16 +11,13 @@
     "build": "npm run compile",
     "watch": "babel --watch -d lib/ src/",
     "lint": "eslint src/**/*.js test/**/*.js --fix",
-    "start": "npm run compile && node example/app",
     "test": "npm run lint"
   },
   "peerDependencies": {
-    "@mapbox/mapbox-gl-draw": "^1.0.0",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1"
+    "@mapbox/mapbox-gl-draw": "^1.0.2",
+    "react-mapbox-gl": "^2.5.0"
   },
   "devDependencies": {
-    "@mapbox/mapbox-gl-draw": "^1.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
@@ -29,7 +26,6 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "5.*",
     "eslint-plugin-react": "^7.3.0",
-    "react": "^15.6.1",
     "rimraf": "^2.6.1"
   },
   "dependencies": {}
