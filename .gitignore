@@ -108,7 +108,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # Others
-lib/
 data/
 build/
-dist/
