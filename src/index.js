@@ -6,6 +6,18 @@ export default class DrawControl extends React.Component {
   componentWillMount() {
     this.draw = new MapboxDraw(this.props);
     this.context.map.addControl(this.draw, this.props.position);
+    this.context.map.on("draw.create", this.props.onDrawCreate);
+    this.context.map.on("draw.delete", this.props.onDrawDelete);
+    this.context.map.on("draw.update", this.props.onDrawUpdate);
+    this.context.map.on("draw.combine", this.props.onDrawCombine);
+    this.context.map.on("draw.uncombine", this.props.onDrawUncombine);
+    this.context.map.on(
+      "draw.selectionchange",
+      this.props.onDrawSelectionChange
+    );
+    this.context.map.on("draw.modechange", this.props.onDrawModeChange);
+    this.context.map.on("draw.render", this.props.onDrawRender);
+    this.context.map.on("draw.actionable", this.props.onDrawActionable);
   }
 
   componentWillUnmount() {
@@ -25,10 +37,28 @@ DrawControl.contextTypes = {
 };
 
 DrawControl.defaultProps = {
-  position: "top-right"
+  position: "top-left",
+  onDrawCreate: () => {},
+  onDrawDelete: () => {},
+  onDrawUpdate: () => {},
+  onDrawCombine: () => {},
+  onDrawUncombine: () => {},
+  onDrawSelectionChange: () => {},
+  onDrawModeChange: () => {},
+  onDrawRender: () => {},
+  onDrawActionable: () => {},
 };
 
 DrawControl.propTypes = {
+  onDrawCreate: PropTypes.func,
+  onDrawDelete: PropTypes.func,
+  onDrawUpdate: PropTypes.func,
+  onDrawCombine: PropTypes.func,
+  onDrawUncombine: PropTypes.func,
+  onDrawSelectionChange: PropTypes.func,
+  onDrawModeChange: PropTypes.func,
+  onDrawRender: PropTypes.func,
+  onDrawActionable: PropTypes.func,
   keybindings: PropTypes.bool,
   touchEnabled: PropTypes.bool,
   boxSelect: PropTypes.bool,
