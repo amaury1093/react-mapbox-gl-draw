@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import MapboxDraw from '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw';
+import React from "react";
+import PropTypes from "prop-types";
+import MapboxDraw from "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw";
 
 export default class DrawControl extends React.Component {
   componentWillMount() {
     this.draw = new MapboxDraw(this.props);
-    this.context.map.addControl(this.draw);
+    this.context.map.addControl(this.draw, this.props.position);
   }
 
   componentWillUnmount() {
@@ -21,7 +21,11 @@ export default class DrawControl extends React.Component {
 }
 
 DrawControl.contextTypes = {
-  map: PropTypes.object.isRequired,
+  map: PropTypes.object.isRequired
+};
+
+DrawControl.defaultProps = {
+  position: "top-right"
 };
 
 DrawControl.propTypes = {
@@ -30,16 +34,17 @@ DrawControl.propTypes = {
   boxSelect: PropTypes.bool,
   clickBuffer: PropTypes.number,
   touchBuffer: PropTypes.number,
+  position: PropTypes.string,
   controls: PropTypes.shape({
     point: PropTypes.bool,
     line_string: PropTypes.bool,
     polygon: PropTypes.bool,
     trash: PropTypes.bool,
     combine_features: PropTypes.bool,
-    uncombine_features: PropTypes.bool,
+    uncombine_features: PropTypes.bool
   }),
   displayControlsDefault: PropTypes.bool,
   styles: PropTypes.arrayOf(PropTypes.object),
   modes: PropTypes.object, // eslint-disable-line
-  default_mode: PropTypes.string,
+  default_mode: PropTypes.string
 };
