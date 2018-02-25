@@ -7,11 +7,14 @@
   "private": true,
   "dependencies": {
     "@mapbox/mapbox-gl-draw": "^1.0.2",
+    "@turf/turf": "^5.1.6",
     "mapbox-gl": "^0.40.1",
+    "mapbox-gl-draw-rectangle-mode": "^1.0.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-mapbox-gl": "^2.5.0",
-    "react-scripts": "1.0.13"
+    "react-scripts": "1.0.13",
+    "remove": "^0.1.5"
   },
   "scripts": {
     "start": "react-scripts start",

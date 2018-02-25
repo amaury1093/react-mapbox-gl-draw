@@ -4,8 +4,20 @@ import MapboxDraw from "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw";
 
 export default class DrawControl extends React.Component {
   componentWillMount() {
-    this.draw = new MapboxDraw(this.props);
+    //if custom modes, add to Mapbox draw modes
+    const modes = MapboxDraw.modes;
+    if (this.props.modes) {
+      for (const mode in this.props.modes) {
+        modes[mode] = this.props.modes[mode];
+      }
+    }
+    const mapboxDrawProps = {
+      ...this.props,
+      modes: modes
+    };
+    this.draw = new MapboxDraw(mapboxDrawProps);
     this.context.map.addControl(this.draw, this.props.position);
+    //hook draw events
     this.context.map.on("draw.create", this.props.onDrawCreate);
     this.context.map.on("draw.delete", this.props.onDrawDelete);
     this.context.map.on("draw.update", this.props.onDrawUpdate);
@@ -46,7 +58,7 @@ DrawControl.defaultProps = {
   onDrawSelectionChange: () => {},
   onDrawModeChange: () => {},
   onDrawRender: () => {},
-  onDrawActionable: () => {},
+  onDrawActionable: () => {}
 };
 
 DrawControl.propTypes = {
