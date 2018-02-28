@@ -1,8 +1,5 @@
 # react-mapbox-gl-draw
 
-This is fork of [react-mapbox-gl-draw](https://github.com/amaurymartiny/react-mapbox-gl-draw)
-that implements draw events.
-
 Draw tools for Mapbox with React: react-mapbox-gl + mapbox-gl-draw.
 
 This package is basically creating React bindings for [mapbox-gl-draw](https://github.com/mapbox/mapbox-gl-draw) so that it can be used with [react-mapbox-gl](https://github.com/alex3165/react-mapbox-gl).

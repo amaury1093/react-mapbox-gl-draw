@@ -109,5 +109,5 @@ $RECYCLE.BIN/
 
 # Others
 data/
-build/
+lib/
 .vscode/

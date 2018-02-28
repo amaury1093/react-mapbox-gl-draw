@@ -3,7 +3,6 @@ import ReactMapboxGl from "react-mapbox-gl";
 import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
 import DrawControl from "../../";
 import logo from "./logo.svg";
-import DrawRectangle from 'mapbox-gl-draw-rectangle-mode';
 
 import "./App.css";
 
@@ -12,13 +11,12 @@ const Map = ReactMapboxGl({
     "pk.eyJ1IjoiYWxleDMxNjUiLCJhIjoiY2o0MHp2cGtiMGFrajMycG5nbzBuY2pjaiJ9.QDApU0XH2v35viSwQuln5w"
 });
 
-
 class App extends Component {
-  onDrawCreate = e => {
-    console.log(e);
+  onDrawCreate = ({ features }) => {
+    console.log(features);
   };
-  onDrawUpdate = e => {
-    console.log(e);
+  onDrawUpdate = ({ features }) => {
+    console.log(({ features }));
   };
   render() {
     return (
@@ -33,9 +31,6 @@ class App extends Component {
         >
           <DrawControl
             position="top-left"
-            // displayControlsDefault={false}
-            modes={{ draw_rectangle: DrawRectangle }}
-            defaultMode="draw_rectangle"
             onDrawCreate={this.onDrawCreate}
             onDrawUpdate={this.onDrawUpdate}
           />
