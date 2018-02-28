@@ -16,7 +16,7 @@ class App extends Component {
     console.log(features);
   };
   onDrawUpdate = ({ features }) => {
-    console.log(({ features }));
+    console.log({ features });
   };
   render() {
     return (
