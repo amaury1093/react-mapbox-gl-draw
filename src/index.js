@@ -1,33 +1,28 @@
-import React from "react";
-import PropTypes from "prop-types";
-import MapboxDraw from "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw";
+import React from 'react';
+import PropTypes from 'prop-types';
+import MapboxDraw from '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw';
 
 export default class DrawControl extends React.Component {
   componentWillMount() {
-    //if custom modes, add to Mapbox draw modes
-    const modes = MapboxDraw.modes;
-    if (this.props.modes) {
-      for (const mode in this.props.modes) {
-        modes[mode] = this.props.modes[mode];
-      }
-    }
-    const mapboxDrawProps = {
+    this.draw = new MapboxDraw({
       ...this.props,
-      modes: modes
-    };
-    this.draw = new MapboxDraw(mapboxDrawProps);
+      modes: {
+        ...MapboxDraw.modes,
+        ...this.props.modes,
+      },
+    });
     const { map } = this.context;
     map.addControl(this.draw, this.props.position);
-    //hook draw events
-    map.on("draw.create", this.props.onDrawCreate);
-    map.on("draw.delete", this.props.onDrawDelete);
-    map.on("draw.update", this.props.onDrawUpdate);
-    map.on("draw.combine", this.props.onDrawCombine);
-    map.on("draw.uncombine", this.props.onDrawUncombine);
-    map.on("draw.selectionchange", this.props.onDrawSelectionChange);
-    map.on("draw.modechange", this.props.onDrawModeChange);
-    map.on("draw.render", this.props.onDrawRender);
-    map.on("draw.actionable", this.props.onDrawActionable);
+    // hook draw events
+    map.on('draw.create', this.props.onDrawCreate);
+    map.on('draw.delete', this.props.onDrawDelete);
+    map.on('draw.update', this.props.onDrawUpdate);
+    map.on('draw.combine', this.props.onDrawCombine);
+    map.on('draw.uncombine', this.props.onDrawUncombine);
+    map.on('draw.selectionchange', this.props.onDrawSelectionChange);
+    map.on('draw.modechange', this.props.onDrawModeChange);
+    map.on('draw.render', this.props.onDrawRender);
+    map.on('draw.actionable', this.props.onDrawActionable);
   }
 
   componentWillUnmount() {
@@ -43,11 +38,11 @@ export default class DrawControl extends React.Component {
 }
 
 DrawControl.contextTypes = {
-  map: PropTypes.object.isRequired
+  map: PropTypes.object.isRequired,
 };
 
 DrawControl.defaultProps = {
-  position: "top-left",
+  position: 'top-left',
   onDrawCreate: () => {},
   onDrawDelete: () => {},
   onDrawUpdate: () => {},
@@ -56,7 +51,7 @@ DrawControl.defaultProps = {
   onDrawSelectionChange: () => {},
   onDrawModeChange: () => {},
   onDrawRender: () => {},
-  onDrawActionable: () => {}
+  onDrawActionable: () => {},
 };
 
 DrawControl.propTypes = {
@@ -81,10 +76,10 @@ DrawControl.propTypes = {
     polygon: PropTypes.bool,
     trash: PropTypes.bool,
     combine_features: PropTypes.bool,
-    uncombine_features: PropTypes.bool
+    uncombine_features: PropTypes.bool,
   }),
   displayControlsDefault: PropTypes.bool,
   styles: PropTypes.arrayOf(PropTypes.object),
   modes: PropTypes.object, // eslint-disable-line
-  default_mode: PropTypes.string
+  default_mode: PropTypes.string,
 };
