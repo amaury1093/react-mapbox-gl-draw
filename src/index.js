@@ -16,20 +16,18 @@ export default class DrawControl extends React.Component {
       modes: modes
     };
     this.draw = new MapboxDraw(mapboxDrawProps);
-    this.context.map.addControl(this.draw, this.props.position);
+    const { map } = this.context;
+    map.addControl(this.draw, this.props.position);
     //hook draw events
-    this.context.map.on("draw.create", this.props.onDrawCreate);
-    this.context.map.on("draw.delete", this.props.onDrawDelete);
-    this.context.map.on("draw.update", this.props.onDrawUpdate);
-    this.context.map.on("draw.combine", this.props.onDrawCombine);
-    this.context.map.on("draw.uncombine", this.props.onDrawUncombine);
-    this.context.map.on(
-      "draw.selectionchange",
-      this.props.onDrawSelectionChange
-    );
-    this.context.map.on("draw.modechange", this.props.onDrawModeChange);
-    this.context.map.on("draw.render", this.props.onDrawRender);
-    this.context.map.on("draw.actionable", this.props.onDrawActionable);
+    map.on("draw.create", this.props.onDrawCreate);
+    map.on("draw.delete", this.props.onDrawDelete);
+    map.on("draw.update", this.props.onDrawUpdate);
+    map.on("draw.combine", this.props.onDrawCombine);
+    map.on("draw.uncombine", this.props.onDrawUncombine);
+    map.on("draw.selectionchange", this.props.onDrawSelectionChange);
+    map.on("draw.modechange", this.props.onDrawModeChange);
+    map.on("draw.render", this.props.onDrawRender);
+    map.on("draw.actionable", this.props.onDrawActionable);
   }
 
   componentWillUnmount() {
