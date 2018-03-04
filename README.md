@@ -1,4 +1,5 @@
 # react-mapbox-gl-draw
+
 Draw tools for Mapbox with React: react-mapbox-gl + mapbox-gl-draw.
 
 This package is basically creating React bindings for [mapbox-gl-draw](https://github.com/mapbox/mapbox-gl-draw) so that it can be used with [react-mapbox-gl](https://github.com/alex3165/react-mapbox-gl).
@@ -45,6 +46,20 @@ Here are the props you can pass to `<DrawControl>`:
 - `styles`, Array\<Object\>: An array of map style objects. By default, Draw provides a map style for you. To learn about overriding styles, see the [Styling Draw](#styling-draw) section below.
 - `modes`, Object: over ride the default modes with your own. `MapboxDraw.modes` can be used to see the default values. More information on custom modes [can be found here](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/MODES.md).
 - `defaultMode`, String (default: `'simple_select'`): the mode (from `modes`) that user will first land in.
+- `position`, String (default: `'top-left'`): the position of the draw controls on the map.
+
+### Draw Events passed as props
+Should be functions that receive event data - See mapbox-gl-draw documentantion
+
+- onDrawCreate
+- onDrawDelete
+- onDrawUpdate
+- onDrawCombine
+- onDrawUncombine
+- onDrawSelectionChange
+- onDrawModeChange
+- onDrawRender
+- onDrawActionable
 
 To learn more about `mapbox-gl-draw`: https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/API.md
 

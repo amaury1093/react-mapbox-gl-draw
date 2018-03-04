@@ -108,6 +108,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # Others
-lib/
 data/
-build/
+lib/
+build
+.vscode/
