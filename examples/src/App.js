@@ -1,23 +1,26 @@
-import React, { Component } from "react";
-import ReactMapboxGl from "react-mapbox-gl";
-import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
-import DrawControl from "../../";
-import logo from "./logo.svg";
+import React, { Component } from 'react';
+import ReactMapboxGl from 'react-mapbox-gl';
+import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
 
-import "./App.css";
+import DrawControl from './react-mapbox-gl-draw';
+import logo from './logo.svg';
+
+import './App.css';
 
 const Map = ReactMapboxGl({
   accessToken:
-    "pk.eyJ1IjoiYWxleDMxNjUiLCJhIjoiY2o0MHp2cGtiMGFrajMycG5nbzBuY2pjaiJ9.QDApU0XH2v35viSwQuln5w"
+    'pk.eyJ1IjoiYWxleDMxNjUiLCJhIjoiY2o0MHp2cGtiMGFrajMycG5nbzBuY2pjaiJ9.QDApU0XH2v35viSwQuln5w'
 });
 
 class App extends Component {
   onDrawCreate = ({ features }) => {
     console.log(features);
   };
+
   onDrawUpdate = ({ features }) => {
     console.log({ features });
   };
+
   render() {
     return (
       <div className="App">
@@ -27,7 +30,7 @@ class App extends Component {
         </div>
         <Map
           style="mapbox://styles/mapbox/outdoors-v9" // eslint-disable-line
-          containerStyle={{ height: "400px", width: "100vw" }}
+          containerStyle={{ height: '400px', width: '100vw' }}
         >
           <DrawControl
             position="top-left"
