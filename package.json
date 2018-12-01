@@ -7,11 +7,10 @@
   "author": "Amaury Martiny",
   "license": "MIT",
   "scripts": {
-    "compile": "rimraf lib/ && babel -d lib/ src/",
-    "build": "npm run compile",
-    "watch": "babel --watch -d lib/ src/",
-    "lint": "semistandard src/**/*.js --parser babel-eslint",
-    "test": "npm run lint"
+    "prebuild": "rimraf lib/",
+    "build": "babel -d lib/ src/",
+    "lint": "semistandard 'src/**/*.js' --parser babel-eslint",
+    "test": "echo skipped for now."
   },
   "peerDependencies": {
     "@mapbox/mapbox-gl-draw": "^1.0.2",
