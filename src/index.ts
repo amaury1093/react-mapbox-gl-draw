@@ -1,62 +1,52 @@
-import * as React from 'react';
+import * as MapboxDraw from '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw';
+import { Control } from 'mapbox-gl';
 import * as PropTypes from 'prop-types';
-import { MapboxDraw } from "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw";
+import * as React from 'react';
 
-export class MapBoxPropTypes {
-  boxSelect = PropTypes.bool;
-  clickBuffer = PropTypes.number;
-  controls = PropTypes.shape({
-    point: PropTypes.bool,
-    line_string: PropTypes.bool,
-    polygon: PropTypes.bool,
-    trash: PropTypes.bool,
-    combine_features: PropTypes.bool,
-    uncombine_features: PropTypes.bool
-    });
-  default_mode = PropTypes.string;
-  displayControlsDefault = PropTypes.bool;
-  keybindings = PropTypes.bool;
-  modes = PropTypes.object;
-  position = PropTypes.string;
-  onDrawActionable = PropTypes.func;
-  onDrawCombine = PropTypes.func;
-  onDrawCreate = PropTypes.func;
-  onDrawDelete = PropTypes.func;
-  onDrawModeChange = PropTypes.func;
-  onDrawRender = PropTypes.func;
-  onDrawSelectionChange = PropTypes.func;
-  onDrawUncombine = PropTypes.func;
-  onDrawUpdate = PropTypes.func;
-  touchBuffer = PropTypes.number;
-  touchEnabled = PropTypes.bool;
+type DrawHandler = (event: any) => void;
 
-  styles = PropTypes.arrayOf(PropTypes.object);
+interface Props {
+  boxSelect: boolean;
+  clickBuffer: number;
+  controls: {
+    point: boolean;
+    line_string: boolean;
+    polygon: boolean;
+    trash: boolean;
+    combine_features: boolean;
+    uncombine_features: boolean;
+  };
+  default_mode: string;
+  displayControlsDefault: boolean;
+  keybindings: boolean;
+  modes: object;
+  onDrawActionable: DrawHandler;
+  onDrawCombine: DrawHandler;
+  onDrawCreate: DrawHandler;
+  onDrawDelete: DrawHandler;
+  onDrawModeChange: DrawHandler;
+  onDrawRender: DrawHandler;
+  onDrawSelectionChange: DrawHandler;
+  onDrawUncombine: DrawHandler;
+  onDrawUpdate: DrawHandler;
+  position: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
+  touchBuffer: number;
+  touchEnabled: boolean;
+  styles: object[];
 }
 
-export default class DrawControl extends React.Component {
+export default class DrawControl extends React.Component<Props> {
   static contextTypes = {
     map: PropTypes.object.isRequired
   };
 
   static defaultProps = {
-    onDrawActionable: () => {},
-    onDrawCombine: () => {},
-    onDrawCreate: () => {},
-    onDrawDelete: () => {},
-    onDrawModeChange: () => {},
-    onDrawRender: () => {},
-    onDrawSelectionChange: () => {},
-    onDrawUncombine: () => {},
-    onDrawUpdate: () => {},
     position: 'top-left'
   };
 
+  draw?: Control;
 
-  static propTypes = new MapBoxPropTypes();
-
-  draw?: MapboxDraw;
-
-  componentWillMount () {
+  componentWillMount() {
     const {
       modes,
       onDrawActionable,
@@ -69,7 +59,7 @@ export default class DrawControl extends React.Component {
       onDrawUncombine,
       onDrawUpdate,
       position
-    } = this.props as MapBoxPropTypes;
+    } = this.props;
 
     const { map } = this.context;
 
@@ -94,7 +84,7 @@ export default class DrawControl extends React.Component {
     map.on('draw.update', onDrawUpdate);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     const { map } = this.context;
     if (!map || !map.getStyle()) {
       return;
@@ -102,7 +92,7 @@ export default class DrawControl extends React.Component {
     map.removeControl(this.draw);
   }
 
-  render () {
+  render() {
     return null;
   }
 }
