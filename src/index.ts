@@ -41,6 +41,15 @@ export default class DrawControl extends React.Component<Props> {
   };
 
   static defaultProps = {
+    onDrawActionable: () => {},
+    onDrawCombine: () => {},
+    onDrawCreate: () => {},
+    onDrawDelete: () => {},
+    onDrawModeChange: () => {},
+    onDrawRender: () => {},
+    onDrawSelectionChange: () => {},
+    onDrawUncombine: () => {},
+    onDrawUpdate: () => {},
     position: 'top-left'
   };
 
