@@ -3,6 +3,10 @@ import { Control } from 'mapbox-gl';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
+const noop = () => {
+  /* do nothing */
+};
+
 type DrawHandler = (event: any) => void;
 
 interface Props {
@@ -41,21 +45,21 @@ export default class DrawControl extends React.Component<Props> {
   };
 
   static defaultProps = {
-    onDrawActionable: () => {},
-    onDrawCombine: () => {},
-    onDrawCreate: () => {},
-    onDrawDelete: () => {},
-    onDrawModeChange: () => {},
-    onDrawRender: () => {},
-    onDrawSelectionChange: () => {},
-    onDrawUncombine: () => {},
-    onDrawUpdate: () => {},
+    onDrawActionable: noop,
+    onDrawCombine: noop,
+    onDrawCreate: noop,
+    onDrawDelete: noop,
+    onDrawModeChange: noop,
+    onDrawRender: noop,
+    onDrawSelectionChange: noop,
+    onDrawUncombine: noop,
+    onDrawUpdate: noop,
     position: 'top-left'
   };
 
   draw?: Control;
 
-  componentWillMount() {
+  componentWillMount () {
     const {
       modes,
       onDrawActionable,
@@ -70,6 +74,7 @@ export default class DrawControl extends React.Component<Props> {
       position
     } = this.props;
 
+    // tslint:disable-next-line
     const { map } = this.context;
 
     this.draw = new MapboxDraw({
@@ -93,7 +98,8 @@ export default class DrawControl extends React.Component<Props> {
     map.on('draw.update', onDrawUpdate);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
+    // tslint:disable-next-line
     const { map } = this.context;
     if (!map || !map.getStyle()) {
       return;
@@ -101,7 +107,7 @@ export default class DrawControl extends React.Component<Props> {
     map.removeControl(this.draw);
   }
 
-  render() {
+  render () {
     return null;
   }
 }
