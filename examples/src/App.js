@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import ReactMapboxGl from 'react-mapbox-gl';
+import DrawControl from 'react-mapbox-gl-draw';
 import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
 
-import DrawControl from './react-mapbox-gl-draw';
 import logo from './logo.svg';
 
 import './App.css';
 
 const Map = ReactMapboxGl({
   accessToken:
-    'pk.eyJ1IjoiYWxleDMxNjUiLCJhIjoiY2o0MHp2cGtiMGFrajMycG5nbzBuY2pjaiJ9.QDApU0XH2v35viSwQuln5w'
+    'pk.eyJ1IjoiZmFrZXVzZXJnaXRodWIiLCJhIjoiY2pwOGlneGI4MDNnaDN1c2J0eW5zb2ZiNyJ9.mALv0tCpbYUPtzT7YysA2g'
 });
 
 class App extends Component {
@@ -29,8 +29,11 @@ class App extends Component {
           <h2>Welcome to react-mapbox-gl-draw</h2>
         </div>
         <Map
-          style="mapbox://styles/mapbox/outdoors-v9" // eslint-disable-line
-          containerStyle={{ height: '400px', width: '100vw' }}
+          style="mapbox://styles/mapbox/streets-v9" // eslint-disable-line
+          containerStyle={{
+            height: '100vh',
+            width: '100vw'
+          }}
         >
           <DrawControl
             position="top-left"

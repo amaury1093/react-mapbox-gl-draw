@@ -7,10 +7,11 @@
   "private": true,
   "dependencies": {
     "@mapbox/mapbox-gl-draw": "^1.0.5",
-    "mapbox-gl": "^0.44.1",
+    "mapbox-gl": "~0.44.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-mapbox-gl": "^3.8.0",
+    "react-mapbox-gl-draw": "file:../",
     "react-scripts": "1.1.1"
   },
   "scripts": {
