@@ -109,6 +109,7 @@ $RECYCLE.BIN/
 
 # Others
 data/
+lib/
 build
 .vscode/
-.package-lock.json
+package-lock.json
