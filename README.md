@@ -8,9 +8,13 @@ Draw tools for Mapbox with React: react-mapbox-gl + mapbox-gl-draw.
 
 This package is basically creating React bindings for [mapbox-gl-draw](https://github.com/mapbox/mapbox-gl-draw) so that it can be used with [react-mapbox-gl](https://github.com/alex3165/react-mapbox-gl).
 
+## Demo
+
+See https://codesandbox.io/s/7z5qvmvqrq.
+
 ## Getting Started
 
-```sh
+```bash
 npm install react-mapbox-gl mapbox-gl @mapbox/mapbox-gl-draw --save # required peer dependencies
 npm install react-mapbox-gl-draw --save
 ```
@@ -24,7 +28,7 @@ import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
 
 const Map = ReactMapboxGl({
   accessToken:
-    'pk.eyJ1IjoiZmFicmljOCIsImEiOiJjaWc5aTV1ZzUwMDJwdzJrb2w0dXRmc2d0In0.p6GGlfyV-WksaDV_KdN27A'
+    'pk.eyJ1IjoiZmFrZXVzZXJnaXRodWIiLCJhIjoiY2pwOGlneGI4MDNnaDN1c2J0eW5zb2ZiNyJ9.mALv0tCpbYUPtzT7YysA2g'
 });
 
 <Map
@@ -40,7 +44,7 @@ const Map = ReactMapboxGl({
 
 ## API
 
-Here are the props you can pass to `<DrawControl>`:
+Here are the props you can pass to `<DrawControl />`:
 
 - `keybindings`, boolean (default `true`): Whether or not to enable keyboard interactions for drawing.
 - `touchEnabled`, boolean (default `true`): Whether or not to enable touch interactions for drawing.
@@ -56,7 +60,7 @@ Here are the props you can pass to `<DrawControl>`:
 
 ### Draw Events passed as props
 
-These are functions that receive event data - See mapbox-gl-draw documentantion.
+These additional props are functions that receive the event data, see [mapbox-gl-draw documentantion](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/API.md).
 
 - `onDrawCreate`
 - `onDrawDelete`
@@ -92,8 +96,14 @@ handleButtonClick() {
 
 ## Example
 
-Run the app in the `examples` folder.
+```bash
+cd examples
+yarn install
+yarn start
+```
+
+The example app should run on `localhost:3000`.
 
 ## Testing
 
-Only `semistandard` is run for linting. Proper testing to be added.
+Only `semistandard` is run for linting. Proper testing needs to be added.
