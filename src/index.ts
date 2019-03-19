@@ -40,7 +40,7 @@ interface Props {
 }
 
 export default class DrawControl extends React.Component<Props> {
-  static contextTypes = MapContext;
+  static contextType = MapContext;
 
   static defaultProps = {
     onDrawActionable: noop,
