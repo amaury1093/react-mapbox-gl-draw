@@ -5,7 +5,7 @@
 [![npm](https://img.shields.io/npm/dw/react-mapbox-gl-draw.svg)](https://www.npmjs.com/package/react-mapbox-gl-draw)
 [![dependencies Status](https://david-dm.org/amaurymartiny/react-mapbox-gl-draw/status.svg)](https://david-dm.org/amaurymartiny/react-mapbox-gl-draw)
 
-Draw tools for Mapbox with React: 🗺️ react-mapbox-gl + 🖌️ mapbox-gl-draw = 🚀
+Draw tools for Mapbox with React: 🗺️ react-mapbox-gl + 🖌️ mapbox-gl-draw
 
 This package is basically creating React bindings for [mapbox-gl-draw](https://github.com/mapbox/mapbox-gl-draw) so that it can be used with [react-mapbox-gl](https://github.com/alex3165/react-mapbox-gl).
 
