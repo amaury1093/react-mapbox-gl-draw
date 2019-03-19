@@ -1,11 +1,11 @@
 {
   "name": "react-mapbox-gl-draw",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Draw tools for Mapbox with React: react-mapbox-gl + mapbox-gl-draw",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": "https://github.com/amaurymartiny/react-mapbox-gl-draw",
-  "author": "Amaury Martiny",
+  "author": "Amaury Martiny <amaury.martiny@protonmail.com>",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf lib/",
@@ -14,19 +14,19 @@
     "test": "echo skipped for now."
   },
   "peerDependencies": {
-    "@mapbox/mapbox-gl-draw": "^1.0.2",
+    "@mapbox/mapbox-gl-draw": "^1.1.1",
     "prop-types": "^15.6.2",
-    "react-mapbox-gl": "^2.5.0 || ^3.9.2"
+    "react-mapbox-gl": "^4.2.0"
   },
   "devDependencies": {
     "@mapbox/mapbox-gl-draw": "^1.1.1",
-    "@types/mapbox-gl": "^0.51.0",
-    "@types/react": "^16.7.11",
+    "@types/mapbox-gl": "^0.51.4",
+    "@types/react": "^16.8.8",
     "prop-types": "^15.6.2",
-    "react-mapbox-gl": "^2.5.0 || ^3.9.2",
-    "rimraf": "^2.6.2",
-    "tslint": "^5.11.0",
+    "react-mapbox-gl": "^4.2.0",
+    "rimraf": "^2.6.3",
+    "tslint": "^5.14.0",
     "tslint-config-semistandard": "^7.0.0",
-    "typescript": "^3.2.1"
+    "typescript": "^3.3.3333"
   }
 }
