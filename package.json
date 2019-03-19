@@ -15,14 +15,12 @@
   },
   "peerDependencies": {
     "@mapbox/mapbox-gl-draw": "^1.1.1",
-    "prop-types": "^15.6.2",
     "react-mapbox-gl": "^4.2.0"
   },
   "devDependencies": {
     "@mapbox/mapbox-gl-draw": "^1.1.1",
     "@types/mapbox-gl": "^0.51.4",
     "@types/react": "^16.8.8",
-    "prop-types": "^15.6.2",
     "react-mapbox-gl": "^4.2.0",
     "rimraf": "^2.6.3",
     "tslint": "^5.14.0",
