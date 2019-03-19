@@ -20,6 +20,8 @@ yarn add react-mapbox-gl mapbox-gl @mapbox/mapbox-gl-draw # required peer depend
 yarn add react-mapbox-gl-draw
 ```
 
+> Note: this version of `react-mapbox-gl-draw` will only work with the latest [`react-mapbox-gl v4`](https://github.com/alex3165/react-mapbox-gl). If you wish to use Draw tools with `react-mapbox-gl@2` or `react-mapbox-gl@3`, please use [`react-mapbox-gl-draw@1.0.5`](https://github.com/amaurymartiny/react-mapbox-gl-draw/tree/v1.0.5).
+
 ```javascript
 import ReactMapboxGl from 'react-mapbox-gl';
 import DrawControl from 'react-mapbox-gl-draw';
