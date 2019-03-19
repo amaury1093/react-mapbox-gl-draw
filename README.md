@@ -3,6 +3,7 @@
 [![Travis (.org)](https://img.shields.io/travis/amaurymartiny/react-mapbox-gl-draw.svg)](https://travis-ci.org/amaurymartiny/react-mapbox-gl-draw)
 [![npm](https://img.shields.io/npm/v/react-mapbox-gl-draw.svg)](https://www.npmjs.com/package/react-mapbox-gl-draw)
 [![npm](https://img.shields.io/npm/dw/react-mapbox-gl-draw.svg)](https://www.npmjs.com/package/react-mapbox-gl-draw)
+[![dependencies Status](https://david-dm.org/amaurymartiny/react-mapbox-gl-draw/status.svg)](https://david-dm.org/amaurymartiny/react-mapbox-gl-draw)
 
 Draw tools for Mapbox with React: react-mapbox-gl + mapbox-gl-draw.
 
@@ -15,8 +16,8 @@ See https://codesandbox.io/s/7z5qvmvqrq.
 ## Getting Started
 
 ```bash
-npm install react-mapbox-gl mapbox-gl @mapbox/mapbox-gl-draw --save # required peer dependencies
-npm install react-mapbox-gl-draw --save
+yarn add react-mapbox-gl mapbox-gl @mapbox/mapbox-gl-draw # required peer dependencies
+yarn add react-mapbox-gl-draw
 ```
 
 ```javascript
@@ -106,4 +107,4 @@ The example app should run on `localhost:3000`.
 
 ## Testing
 
-Only `semistandard` is run for linting. Proper testing needs to be added.
+Only `semistandard` is run for linting. Proper testing needs to be added, see [#19](https://github.com/amaurymartiny/react-mapbox-gl-draw/issues/19) if you would like to help.
