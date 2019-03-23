@@ -94,15 +94,15 @@ export default class DrawControl extends React.Component<Props> {
     map.addControl(this.draw!, position);
 
     // Hook draw events
-    map.on('draw.actionable', onDrawActionable);
-    map.on('draw.combine', onDrawCombine);
-    map.on('draw.create', onDrawCreate);
-    map.on('draw.delete', onDrawDelete);
-    map.on('draw.modechange', onDrawModeChange);
-    map.on('draw.render', onDrawRender);
-    map.on('draw.selectionchange', onDrawSelectionChange);
-    map.on('draw.uncombine', onDrawUncombine);
-    map.on('draw.update', onDrawUpdate);
+    map.on('draw.actionable', onDrawActionable!);
+    map.on('draw.combine', onDrawCombine!);
+    map.on('draw.create', onDrawCreate!);
+    map.on('draw.delete', onDrawDelete!);
+    map.on('draw.modechange', onDrawModeChange!);
+    map.on('draw.render', onDrawRender!);
+    map.on('draw.selectionchange', onDrawSelectionChange!);
+    map.on('draw.uncombine', onDrawUncombine!);
+    map.on('draw.update', onDrawUpdate!);
   }
 
   componentWillUnmount () {
