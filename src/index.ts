@@ -10,33 +10,33 @@ function noop () {
 type DrawHandler = (event: any) => void;
 
 interface Props {
-  boxSelect: boolean;
-  clickBuffer: number;
-  controls: {
+  boxSelect?: boolean;
+  clickBuffer?: number;
+  controls?: Partial<{
     point: boolean;
     line_string: boolean;
     polygon: boolean;
     trash: boolean;
     combine_features: boolean;
     uncombine_features: boolean;
-  };
-  default_mode: string;
-  displayControlsDefault: boolean;
-  keybindings: boolean;
-  modes: object;
-  onDrawActionable: DrawHandler;
-  onDrawCombine: DrawHandler;
-  onDrawCreate: DrawHandler;
-  onDrawDelete: DrawHandler;
-  onDrawModeChange: DrawHandler;
-  onDrawRender: DrawHandler;
-  onDrawSelectionChange: DrawHandler;
-  onDrawUncombine: DrawHandler;
-  onDrawUpdate: DrawHandler;
-  position: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
-  touchBuffer: number;
-  touchEnabled: boolean;
-  styles: object[];
+  }>;
+  default_mode?: string;
+  displayControlsDefault?: boolean;
+  keybindings?: boolean;
+  modes?: object;
+  onDrawActionable?: DrawHandler;
+  onDrawCombine?: DrawHandler;
+  onDrawCreate?: DrawHandler;
+  onDrawDelete?: DrawHandler;
+  onDrawModeChange?: DrawHandler;
+  onDrawRender?: DrawHandler;
+  onDrawSelectionChange?: DrawHandler;
+  onDrawUncombine?: DrawHandler;
+  onDrawUpdate?: DrawHandler;
+  position?: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
+  touchBuffer?: number;
+  touchEnabled?: boolean;
+  styles?: object[];
 }
 
 export default class DrawControl extends React.Component<Props> {
