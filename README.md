@@ -9,6 +9,8 @@ Draw tools for Mapbox with React: 🗺️ react-mapbox-gl + 🖌️ mapbox-gl-dr
 
 This package is basically creating React bindings for [mapbox-gl-draw](https://github.com/mapbox/mapbox-gl-draw) so that it can be used with [react-mapbox-gl](https://github.com/alex3165/react-mapbox-gl).
 
+> ❗ Important: This package does not work with Uber's [`react-map-gl`](https://github.com/uber/react-map-gl). See [this issue](https://github.com/uber/react-map-gl/issues/450).
+
 ## Demo
 
 See https://codesandbox.io/s/7z5qvmvqrq.
