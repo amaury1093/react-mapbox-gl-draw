@@ -1,7 +1,7 @@
 import * as MapboxDraw from '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw';
 import { Control } from 'mapbox-gl';
 import * as React from 'react';
-import { MapContext } from 'react-mapbox-gl/lib/context';
+import { MapContext } from 'react-mapbox-gl/lib-esm/context';
 
 function noop () {
   /* do nothing */
