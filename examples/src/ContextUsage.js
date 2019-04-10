@@ -12,7 +12,10 @@ export class ContextUsage extends React.Component {
   componentDidMount() {
     const map = this.context;
 
-    console.log('Map is correctly defined in context:', map);
+    console.log(
+      'Map is correctly defined in context of <ContextUsage />:',
+      map
+    );
   }
 
   render() {
