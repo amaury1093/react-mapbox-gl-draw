@@ -5,28 +5,42 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": "https://github.com/amaurymartiny/react-mapbox-gl-draw",
-  "author": "Amaury Martiny",
+  "author": "Amaury Martiny <amaury.martiny@protonmail.com>",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf lib/",
     "build": "tsc",
+    "preexample": "yarn build",
+    "example": "cd example && webpack-dev-server",
     "lint": "tslint --project .",
     "test": "echo skipped for now."
   },
   "peerDependencies": {
-    "@mapbox/mapbox-gl-draw": "^1.0.2",
-    "prop-types": "^15.6.2",
-    "react-mapbox-gl": "^2.5.0 || ^3.9.2"
+    "@mapbox/mapbox-gl-draw": "^1.1.1",
+    "@types/mapbox-gl": "^0.51.6",
+    "react-mapbox-gl": "^4.4.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
     "@mapbox/mapbox-gl-draw": "^1.1.1",
-    "@types/mapbox-gl": "^0.51.0",
-    "@types/react": "^16.7.11",
-    "prop-types": "^15.6.2",
-    "react-mapbox-gl": "^2.5.0 || ^3.9.2",
-    "rimraf": "^2.6.2",
-    "tslint": "^5.11.0",
+    "@types/mapbox-gl": "^0.51.6",
+    "@types/react": "^16.8.8",
+    "@types/supercluster": "3.0.2",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "mapbox-gl": "^0.54.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-mapbox-gl": "^4.4.0",
+    "rimraf": "^2.6.3",
+    "style-loader": "^0.23.1",
+    "tslint": "^5.14.0",
     "tslint-config-semistandard": "^7.0.0",
-    "typescript": "^3.2.1"
+    "typescript": "^3.4.5",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1"
   }
 }

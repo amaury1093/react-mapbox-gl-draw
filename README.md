@@ -3,10 +3,13 @@
 [![Travis (.org)](https://img.shields.io/travis/amaurymartiny/react-mapbox-gl-draw.svg)](https://travis-ci.org/amaurymartiny/react-mapbox-gl-draw)
 [![npm](https://img.shields.io/npm/v/react-mapbox-gl-draw.svg)](https://www.npmjs.com/package/react-mapbox-gl-draw)
 [![npm](https://img.shields.io/npm/dw/react-mapbox-gl-draw.svg)](https://www.npmjs.com/package/react-mapbox-gl-draw)
+[![dependencies Status](https://david-dm.org/amaurymartiny/react-mapbox-gl-draw/status.svg)](https://david-dm.org/amaurymartiny/react-mapbox-gl-draw)
 
-Draw tools for Mapbox with React: react-mapbox-gl + mapbox-gl-draw.
+Draw tools for Mapbox with React: 🗺️ react-mapbox-gl + 🖌️ mapbox-gl-draw
 
 This package is basically creating React bindings for [mapbox-gl-draw](https://github.com/mapbox/mapbox-gl-draw) so that it can be used with [react-mapbox-gl](https://github.com/alex3165/react-mapbox-gl).
+
+> ❗ Important: This package does not work with Uber's [react-map-gl](https://github.com/uber/react-map-gl). See [this issue](https://github.com/uber/react-map-gl/issues/450) for more info.
 
 ## Demo
 
@@ -15,9 +18,11 @@ See https://codesandbox.io/s/7z5qvmvqrq.
 ## Getting Started
 
 ```bash
-npm install react-mapbox-gl mapbox-gl @mapbox/mapbox-gl-draw --save # required peer dependencies
-npm install react-mapbox-gl-draw --save
+yarn add react-mapbox-gl mapbox-gl @mapbox/mapbox-gl-draw # required peer dependencies
+yarn add react-mapbox-gl-draw
 ```
+
+> Note: this version of `react-mapbox-gl-draw` will only work with the latest `react-mapbox-gl@^4.4.0`. If you wish to use Draw tools with `react-mapbox-gl@2.x.x` or `react-mapbox-gl@v3.x.x`, please use [`react-mapbox-gl-draw@1.0.6`](https://github.com/amaurymartiny/react-mapbox-gl-draw/tree/v1.0.6).
 
 ```javascript
 import ReactMapboxGl from 'react-mapbox-gl';
@@ -96,14 +101,14 @@ handleButtonClick() {
 
 ## Example
 
+An example application of how to use `react-mapbox-gl-draw` can be found in the `example/` folder. To run it, run:
+
 ```bash
-cd examples
-yarn install
-yarn start
+yarn example
 ```
 
-The example app should run on `localhost:3000`.
+The example app should run on `localhost:8080`.
 
 ## Testing
 
-Only `semistandard` is run for linting. Proper testing needs to be added.
+Only `semistandard` is run for linting. Proper testing needs to be added, see [#19](https://github.com/amaurymartiny/react-mapbox-gl-draw/issues/19) if you would like to help.
