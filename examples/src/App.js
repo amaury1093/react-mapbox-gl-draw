@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactMapboxGl from 'react-mapbox-gl';
 import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
 
-import { ContextUsage } from './ContextUsage';
 import logo from './logo.svg';
 import DrawControl from './react-mapbox-gl-draw';
 
@@ -35,14 +34,7 @@ class App extends Component {
             height: '100vh',
             width: '100vw'
           }}
-        >
-          <ContextUsage />
-          <DrawControl
-            position="top-left"
-            onDrawCreate={this.onDrawCreate}
-            onDrawUpdate={this.onDrawUpdate}
-          />
-        </Map>
+        />
       </div>
     );
   }

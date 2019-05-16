@@ -6904,10 +6904,10 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.4.tgz#90f336a68c3a29a096a3d648ab80e87ec61482a2"
   integrity sha512-PVadd+WaUDOAciICm/J1waJaSvgq+4rHE/K70j0PFqKhkTBsPv/82UGQJNXAngz1fOQLLxI6z1sEDmJDQhCTAA==
 
-react-mapbox-gl@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/react-mapbox-gl/-/react-mapbox-gl-4.2.0.tgz#ae4384535b6d1dab0492920b1c712b531893135a"
-  integrity sha512-dXxvjczZEODPbD6vTR8EwRBm1+waYVLMh5vYALCYxWB7pSDuYbn0FCrgZz+neZOtz+VIvD7ut5R/OvnkA11AOQ==
+react-mapbox-gl@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/react-mapbox-gl/-/react-mapbox-gl-4.4.0.tgz#1098d255b5f0c7e47ca3a10be3183789cb867672"
+  integrity sha512-AD4xRov5GPpKReyCB1TM01oC2UtW5W2/XLp7vhuXwgEqfvHshwtIr1ac1K2CVtjW0ALmr2YYehJo2GAdDffDxA==
   dependencies:
     "@turf/bbox" "4.7.3"
     "@turf/helpers" "4.7.3"

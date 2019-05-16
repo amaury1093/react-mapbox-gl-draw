@@ -10,7 +10,7 @@
     "mapbox-gl": "^0.53.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-mapbox-gl": "^4.2.0",
+    "react-mapbox-gl": "^4.4.0",
     "react-scripts": "^1.1.1"
   },
   "scripts": {
