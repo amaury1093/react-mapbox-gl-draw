@@ -13,7 +13,7 @@ This package is basically creating React bindings for [mapbox-gl-draw](https://g
 
 ## Demo
 
-See https://codesandbox.io/s/7z5qvmvqrq.
+See https://codesandbox.io/s/lucid-yonath-gm7vo.
 
 ## Getting Started
 
@@ -107,7 +107,7 @@ An example application of how to use `react-mapbox-gl-draw` can be found in the 
 yarn example
 ```
 
-The example app should run on `localhost:8080`.
+The example app should run on `localhost:8080`. An online demo is also hosted on CodeSandbox: https://codesandbox.io/s/lucid-yonath-gm7vo.
 
 ## Testing
 
