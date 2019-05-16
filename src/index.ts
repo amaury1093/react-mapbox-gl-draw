@@ -1,7 +1,7 @@
 import * as MapboxDraw from '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw';
 import { Control } from 'mapbox-gl';
 import * as React from 'react';
-import { MapContext } from 'react-mapbox-gl/lib-esm/context';
+import { MapContext } from 'react-mapbox-gl';
 
 function noop () {
   /* do nothing */
@@ -9,7 +9,10 @@ function noop () {
 
 type DrawHandler = (event: any) => void;
 
-interface Props {
+/**
+ * User-facing props passed to <DrawControl />
+ */
+export interface DrawControlProps {
   boxSelect?: boolean;
   clickBuffer?: number;
   controls?: Partial<{
@@ -39,19 +42,10 @@ interface Props {
   styles?: object[];
 }
 
-export default class DrawControl extends React.Component<Props> {
+export default class DrawControl extends React.Component<DrawControlProps> {
   static contextType = MapContext;
 
   static defaultProps = {
-    onDrawActionable: noop,
-    onDrawCombine: noop,
-    onDrawCreate: noop,
-    onDrawDelete: noop,
-    onDrawModeChange: noop,
-    onDrawRender: noop,
-    onDrawSelectionChange: noop,
-    onDrawUncombine: noop,
-    onDrawUpdate: noop,
     position: 'top-left'
   };
 
@@ -94,15 +88,15 @@ export default class DrawControl extends React.Component<Props> {
     map.addControl(this.draw!, position);
 
     // Hook draw events
-    map.on('draw.actionable', onDrawActionable!);
-    map.on('draw.combine', onDrawCombine!);
-    map.on('draw.create', onDrawCreate!);
-    map.on('draw.delete', onDrawDelete!);
-    map.on('draw.modechange', onDrawModeChange!);
-    map.on('draw.render', onDrawRender!);
-    map.on('draw.selectionchange', onDrawSelectionChange!);
-    map.on('draw.uncombine', onDrawUncombine!);
-    map.on('draw.update', onDrawUpdate!);
+    map.on('draw.actionable', onDrawActionable || noop);
+    map.on('draw.combine', onDrawCombine || noop);
+    map.on('draw.create', onDrawCreate || noop);
+    map.on('draw.delete', onDrawDelete || noop);
+    map.on('draw.modechange', onDrawModeChange || noop);
+    map.on('draw.render', onDrawRender || noop);
+    map.on('draw.selectionchange', onDrawSelectionChange || noop);
+    map.on('draw.uncombine', onDrawUncombine || noop);
+    map.on('draw.update', onDrawUpdate || noop);
   }
 
   componentWillUnmount () {
