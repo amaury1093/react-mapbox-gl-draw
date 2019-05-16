@@ -101,13 +101,13 @@ handleButtonClick() {
 
 ## Example
 
+An example application of how to use `react-mapbox-gl-draw` can be found in the `example/` folder. To run it, run:
+
 ```bash
-cd examples
-yarn install
-yarn start
+yarn example
 ```
 
-The example app should run on `localhost:3000`.
+The example app should run on `localhost:8080`.
 
 ## Testing
 
