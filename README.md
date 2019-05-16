@@ -9,7 +9,7 @@ Draw tools for Mapbox with React: 🗺️ react-mapbox-gl + 🖌️ mapbox-gl-dr
 
 This package is basically creating React bindings for [mapbox-gl-draw](https://github.com/mapbox/mapbox-gl-draw) so that it can be used with [react-mapbox-gl](https://github.com/alex3165/react-mapbox-gl).
 
-> ❗ Important: This package does not work with Uber's [react-map-gl](https://github.com/uber/react-map-gl). See [this issue](https://github.com/uber/react-map-gl/issues/450).
+> ❗ Important: This package does not work with Uber's [react-map-gl](https://github.com/uber/react-map-gl). See [this issue](https://github.com/uber/react-map-gl/issues/450) for more info.
 
 ## Demo
 
@@ -22,7 +22,7 @@ yarn add react-mapbox-gl mapbox-gl @mapbox/mapbox-gl-draw # required peer depend
 yarn add react-mapbox-gl-draw
 ```
 
-> Note: this version of `react-mapbox-gl-draw` will only work with the latest `react-mapbox-gl@v4`. If you wish to use Draw tools with `react-mapbox-gl@v2` or `react-mapbox-gl@v3`, please use [`react-mapbox-gl-draw@1.0.6`](https://github.com/amaurymartiny/react-mapbox-gl-draw/tree/v1.0.6).
+> Note: this version of `react-mapbox-gl-draw` will only work with the latest `react-mapbox-gl@^4.4.0`. If you wish to use Draw tools with `react-mapbox-gl@2.x.x` or `react-mapbox-gl@v3.x.x`, please use [`react-mapbox-gl-draw@1.0.6`](https://github.com/amaurymartiny/react-mapbox-gl-draw/tree/v1.0.6).
 
 ```javascript
 import ReactMapboxGl from 'react-mapbox-gl';
