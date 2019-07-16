@@ -39,6 +39,7 @@ export interface DrawControlProps {
   position?: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
   touchBuffer?: number;
   touchEnabled?: boolean;
+  userProperties?: boolean;
   styles?: object[];
 }
 
