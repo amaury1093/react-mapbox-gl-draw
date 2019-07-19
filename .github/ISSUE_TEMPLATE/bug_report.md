@@ -23,14 +23,6 @@ Hello! Thanks for contributing.  For the fastest response and resolution, please
 
 -->
 
-**react-mapbox-gl-draw version**:
-
-**react-mapbox-gl version**:
-
-**mapbox-gl version**:
-
-**browser**:
-
 ### Steps to Trigger Behavior
 
  1.
@@ -48,3 +40,10 @@ https://codesandbox.io/
 ### Expected Behavior
 
 ### Actual Behavior
+
+### Notes
+
+react-mapbox-gl-draw version:
+react-mapbox-gl version:
+mapbox-gl version:
+browser:
