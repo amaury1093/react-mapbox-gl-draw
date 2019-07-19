@@ -874,7 +874,7 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/supercluster@^3":
+"@types/supercluster@^3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@types/supercluster/-/supercluster-3.0.2.tgz#dc11a6afa3d21b1a3d8510b1759a668fdf19e254"
   integrity sha512-BSGVanlDm1+D3dcGKcy9pQurYAP1/5Jof9qkoyE8oYAxFEKIyUrieZ19V/B61Cw7N8eBy6bqtKGJK1YwbLSyEg==

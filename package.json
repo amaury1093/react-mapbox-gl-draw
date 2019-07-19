@@ -43,6 +43,6 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
-    "@types/supercluster": "^3"
+    "@types/supercluster": "^3.0.2"
   }
 }
