@@ -1,12 +1,15 @@
 {
   "name": "react-mapbox-gl-draw",
   "version": "2.0.2",
-  "description": "Draw tools for Mapbox with React: react-mapbox-gl + mapbox-gl-draw",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "repository": "https://github.com/amaurymartiny/react-mapbox-gl-draw",
   "author": "Amaury Martiny <amaury.martiny@protonmail.com>",
+  "description": "Draw tools for Mapbox with React: react-mapbox-gl + mapbox-gl-draw",
+  "files": [
+    "lib"
+  ],
   "license": "MIT",
+  "main": "lib/index.js",
+  "repository": "https://github.com/amaurymartiny/react-mapbox-gl-draw",
+  "types": "lib/index.d.ts",
   "scripts": {
     "prebuild": "rimraf lib/",
     "build": "tsc",
