@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.2](https://github.com/amaurymartiny/react-mapbox-gl-draw/compare/v2.0.1...v2.0.2) (2019-07-19)
+
+
+### Bug Fixes
+
+* Add userProperties to DrawControlProps ([#32](https://github.com/amaurymartiny/react-mapbox-gl-draw/issues/32)) ([8685e18](https://github.com/amaurymartiny/react-mapbox-gl-draw/commit/8685e18))
+* Update packages for security patch ([#35](https://github.com/amaurymartiny/react-mapbox-gl-draw/issues/35)) ([8f304f6](https://github.com/amaurymartiny/react-mapbox-gl-draw/commit/8f304f6))
+
+
+
 ## [2.0.1](https://github.com/amaurymartiny/react-mapbox-gl-draw/compare/v2.0.0...v2.0.1) (2019-07-02)
 
 
