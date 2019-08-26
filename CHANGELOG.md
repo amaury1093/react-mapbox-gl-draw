@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.3](https://github.com/amaurymartiny/react-mapbox-gl-draw/compare/v2.0.2...v2.0.3) (2019-08-26)
+
+
+### Bug Fixes
+
+* Security patch (esm vulnerability) ([#41](https://github.com/amaurymartiny/react-mapbox-gl-draw/issues/41)) ([ee00d25](https://github.com/amaurymartiny/react-mapbox-gl-draw/commit/ee00d25))
+
+
+
 ## [2.0.2](https://github.com/amaurymartiny/react-mapbox-gl-draw/compare/v2.0.1...v2.0.2) (2019-07-19)
 
 
