@@ -4,6 +4,7 @@
 [![npm](https://img.shields.io/npm/v/react-mapbox-gl-draw.svg)](https://www.npmjs.com/package/react-mapbox-gl-draw)
 [![npm](https://img.shields.io/npm/dw/react-mapbox-gl-draw.svg)](https://www.npmjs.com/package/react-mapbox-gl-draw)
 [![dependencies Status](https://david-dm.org/amaurymartiny/react-mapbox-gl-draw/status.svg)](https://david-dm.org/amaurymartiny/react-mapbox-gl-draw)
+[![](https://img.shields.io/badge/Buy%20me%20a%20tree-%F0%9F%8C%B3-lightgreen)](https://offset.earth/amaurymartiny)
 
 Draw tools for Mapbox with React: 🗺️ react-mapbox-gl + 🖌️ mapbox-gl-draw
 
