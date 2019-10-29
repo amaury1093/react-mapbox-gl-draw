@@ -874,10 +874,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/supercluster@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@types/supercluster/-/supercluster-3.0.2.tgz#dc11a6afa3d21b1a3d8510b1759a668fdf19e254"
-  integrity sha512-BSGVanlDm1+D3dcGKcy9pQurYAP1/5Jof9qkoyE8oYAxFEKIyUrieZ19V/B61Cw7N8eBy6bqtKGJK1YwbLSyEg==
+"@types/supercluster@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@types/supercluster/-/supercluster-5.0.1.tgz#0b25cca65b06d22fc24acc6b004843acd5d105a9"
+  integrity sha512-HpL0RXND3iR4O5MXi/4X+PoTkHA6sEFDq54qRD1Ps0YeceL5jyg9gMUeQvNU9HJpUXWbzwpCTP9hH3yQAqF9wg==
   dependencies:
     "@types/geojson" "*"
 
