@@ -3,10 +3,11 @@ import { Control } from 'mapbox-gl';
 import * as React from 'react';
 import { MapContext } from 'react-mapbox-gl';
 
-function noop () {
+function noop(): void {
   /* do nothing */
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type DrawHandler = (event: any) => void;
 
 /**
@@ -54,7 +55,7 @@ export default class DrawControl extends React.Component<DrawControlProps> {
 
   draw?: Control;
 
-  componentDidMount () {
+  componentDidMount(): void {
     const map = this.context;
     // The map needs to be passed in the React Context, or welse we can't do
     // anything.
@@ -86,7 +87,7 @@ export default class DrawControl extends React.Component<DrawControlProps> {
     });
 
     // Add it to our map
-    map.addControl(this.draw!, position);
+    map.addControl(this.draw as Control, position);
 
     // Hook draw events
     map.on('draw.actionable', onDrawActionable || noop);
@@ -100,7 +101,7 @@ export default class DrawControl extends React.Component<DrawControlProps> {
     map.on('draw.update', onDrawUpdate || noop);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount(): void {
     const map = this.context;
     if (!map || !map.getStyle()) {
       return;
@@ -112,7 +113,7 @@ export default class DrawControl extends React.Component<DrawControlProps> {
     map.removeControl(this.draw);
   }
 
-  render () {
+  render(): null {
     return null;
   }
 }

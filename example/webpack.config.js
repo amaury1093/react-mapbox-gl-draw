@@ -1,31 +1,31 @@
 module.exports = {
-  entry: "./src/index.js",
-  mode: "development",
+  entry: './src/index.js',
+  mode: 'development',
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ['babel-loader']
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
   node: {
-    fs: "empty" // https://github.com/mapbox/mapbox-gl-draw/issues/626
+    fs: 'empty' // https://github.com/mapbox/mapbox-gl-draw/issues/626
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx"]
+    extensions: ['*', '.js', '.jsx']
   },
   output: {
-    path: __dirname + "/dist",
-    publicPath: "/",
-    filename: "bundle.js"
+    path: __dirname + '/dist',
+    publicPath: '/',
+    filename: 'bundle.js'
   },
   devServer: {
-    contentBase: "./dist"
+    contentBase: './dist'
   }
 };

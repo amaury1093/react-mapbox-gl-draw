@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
     "declaration": true,
     "jsx": "react",
     "module": "commonjs",
     "outDir": "./lib",
-    "strict": true,
     "target": "es6"
   },
+  "extends": "./node_modules/@amaurymartiny/tsconfig/tsconfig",
   "include": ["./src"]
 }
