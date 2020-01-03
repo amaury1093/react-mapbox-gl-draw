@@ -12,9 +12,9 @@
   "scripts": {
     "prebuild": "rimraf lib/",
     "build": "tsc",
-    "preexample": "yarn build",
-    "example": "cd example && webpack-dev-server",
-    "lint": "tslint --project .",
+    "deploy": "yarn build && standard-version",
+    "example": "yarn build && cd example && webpack-dev-server",
+    "lint": "tsc --noEmit && eslint . --ext ts",
     "test": "echo skipped for now."
   },
   "types": "lib/index.d.ts",
@@ -24,6 +24,7 @@
     "react-mapbox-gl": "^4.8.1"
   },
   "devDependencies": {
+    "@amaurymartiny/config": "^1.0.10",
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.7.4",
@@ -37,9 +38,8 @@
     "react-dom": "^16.12.0",
     "react-mapbox-gl": "^4.8.1",
     "rimraf": "^3.0.0",
+    "standard-version": "^7.0.1",
     "style-loader": "^1.1.2",
-    "tslint": "^5.20.1",
-    "tslint-config-semistandard": "^8.0.1",
     "typescript": "^3.7.4",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
