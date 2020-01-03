@@ -112,4 +112,4 @@ The example app should run on `localhost:8080`. An online demo is also hosted on
 
 ## Testing
 
-Only `semistandard` is run for linting. Proper testing needs to be added, see [#19](https://github.com/amaurymartiny/react-mapbox-gl-draw/issues/19) if you would like to help.
+Only `eslint` is run for linting. Proper testing needs to be added, see [#19](https://github.com/amaurymartiny/react-mapbox-gl-draw/issues/19) if you would like to help.
