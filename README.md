@@ -56,13 +56,15 @@ Here are the props you can pass to `<DrawControl />`:
 - `touchEnabled`, boolean (default `true`): Whether or not to enable touch interactions for drawing.
 - `boxSelect`, boolean (default `true`): Whether or not to enable box selection of features with `shift`+`click`+drag. If `false`, `shift`+`click`+drag zooms into an area.
 - `clickBuffer`, number (default: `2`): Number of pixels around any feature or vertex (in every direction) that will respond to a click.
-- `touchBuffer`, number (default: `25`): Number of pixels around any feature of vertex (in every directoin) that will respond to a touch.
+- `touchBuffer`, number (default: `25`): Number of pixels around any feature of vertex (in every direction) that will respond to a touch.
 - `controls`, Object: Hide or show individual controls. Each property's name is a control, and value is a boolean indicating whether the control is on or off. Available control names are `point`, `line_string`, `polygon`, `trash`, `combine_features` and `uncombine_features`. By default, all controls are on. To change that default, use `displayControlsDefault`.
 - `displayControlsDefault`, boolean (default: `true`): The default value for `controls`. For example, if you would like all controls to be _off_ by default, and specify a whitelist with `controls`, use `displayControlsDefault: false`.
-- `styles`, Array\<Object\>: An array of map style objects. By default, Draw provides a map style for you. To learn about overriding styles, see the [Styling Draw](#styling-draw) section below.
+- `styles`, Array\<Object\>: An array of map style objects. By default, Draw provides a map style for you. To learn about overriding styles, see the [Styling Draw](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/API.md#styling-draw) section below.
 - `modes`, Object: over ride the default modes with your own. `MapboxDraw.modes` can be used to see the default values. More information on custom modes [can be found here](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/MODES.md).
 - `defaultMode`, String (default: `'simple_select'`): the mode (from `modes`) that user will first land in.
-- `position`, String (default: `'top-left'`): the position of the draw controls on the map.
+- `userProperties`, boolean (default: `false`): properties of a feature will also be available for styling and prefixed with `user_`, e.g., `['==', 'user_custom_label', 'Example']`
+
+Also see the API reference for [`mapbox-gl-draw`](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/API.md).
 
 ### Draw Events passed as props
 
