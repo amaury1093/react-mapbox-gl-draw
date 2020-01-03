@@ -1,6 +1,6 @@
 # react-mapbox-gl-draw
 
-[![Travis (.org)](https://img.shields.io/travis/amaurymartiny/react-mapbox-gl-draw.svg)](https://travis-ci.org/amaurymartiny/react-mapbox-gl-draw)
+[![Actions Status](https://github.com/amaurymartiny/react-mapbox-gl-draw/workflows/pr/badge.svg)](https://github.com/amaurymartiny/react-mapbox-gl-draw/actions)
 [![npm](https://img.shields.io/npm/v/react-mapbox-gl-draw.svg)](https://www.npmjs.com/package/react-mapbox-gl-draw)
 [![npm](https://img.shields.io/npm/dw/react-mapbox-gl-draw.svg)](https://www.npmjs.com/package/react-mapbox-gl-draw)
 [![dependencies Status](https://david-dm.org/amaurymartiny/react-mapbox-gl-draw/status.svg)](https://david-dm.org/amaurymartiny/react-mapbox-gl-draw)
@@ -26,22 +26,22 @@ yarn add react-mapbox-gl-draw
 > Note: this version of `react-mapbox-gl-draw` will only work with the latest `react-mapbox-gl@^4.4.0`. If you wish to use Draw tools with `react-mapbox-gl@2.x.x` or `react-mapbox-gl@v3.x.x`, please use [`react-mapbox-gl-draw@1.0.6`](https://github.com/amaurymartiny/react-mapbox-gl-draw/tree/v1.0.6).
 
 ```javascript
-import ReactMapboxGl from 'react-mapbox-gl';
-import DrawControl from 'react-mapbox-gl-draw';
+import ReactMapboxGl from "react-mapbox-gl";
+import DrawControl from "react-mapbox-gl-draw";
 
 // Don't forget to import the CSS
-import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
+import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
 
 const Map = ReactMapboxGl({
   accessToken:
-    'pk.eyJ1IjoiZmFrZXVzZXJnaXRodWIiLCJhIjoiY2pwOGlneGI4MDNnaDN1c2J0eW5zb2ZiNyJ9.mALv0tCpbYUPtzT7YysA2g'
+    "pk.eyJ1IjoiZmFrZXVzZXJnaXRodWIiLCJhIjoiY2pwOGlneGI4MDNnaDN1c2J0eW5zb2ZiNyJ9.mALv0tCpbYUPtzT7YysA2g"
 });
 
 <Map
   style="mapbox://styles/mapbox/streets-v9"
   containerStyle={{
-    height: '100vh',
-    width: '100vw'
+    height: "100vh",
+    width: "100vw"
   }}
 >
   <DrawControl />

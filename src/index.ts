@@ -3,7 +3,7 @@ import { Control } from 'mapbox-gl';
 import * as React from 'react';
 import { MapContext } from 'react-mapbox-gl';
 
-function noop() {
+function noop () {
   /* do nothing */
 }
 
@@ -54,7 +54,7 @@ export default class DrawControl extends React.Component<DrawControlProps> {
 
   draw?: Control;
 
-  componentDidMount() {
+  componentDidMount () {
     const map = this.context;
     // The map needs to be passed in the React Context, or welse we can't do
     // anything.
@@ -100,7 +100,7 @@ export default class DrawControl extends React.Component<DrawControlProps> {
     map.on('draw.update', onDrawUpdate || noop);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     const map = this.context;
     if (!map || !map.getStyle()) {
       return;
@@ -112,7 +112,7 @@ export default class DrawControl extends React.Component<DrawControlProps> {
     map.removeControl(this.draw);
   }
 
-  render() {
+  render () {
     return null;
   }
 }
