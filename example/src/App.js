@@ -1,22 +1,22 @@
-import React from 'react';
-import ReactMapboxGl from 'react-mapbox-gl';
-import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
+import React from "react";
+import ReactMapboxGl from "react-mapbox-gl";
+import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
 
-import DrawControl from '../../lib';
-import './App.css';
+import DrawControl from "../../lib";
+import "./App.css";
 
 const Map = ReactMapboxGl({
   accessToken:
-    'pk.eyJ1IjoiZmFrZXVzZXJnaXRodWIiLCJhIjoiY2pwOGlneGI4MDNnaDN1c2J0eW5zb2ZiNyJ9.mALv0tCpbYUPtzT7YysA2g'
+    "pk.eyJ1IjoiZmFrZXVzZXJnaXRodWIiLCJhIjoiY2pwOGlneGI4MDNnaDN1c2J0eW5zb2ZiNyJ9.mALv0tCpbYUPtzT7YysA2g"
 });
 
 export function App() {
   const onDrawCreate = ({ features }) => {
-    console.log(features);
+    console.log("onDrawCreate", features);
   };
 
   const onDrawUpdate = ({ features }) => {
-    console.log(features);
+    console.log("onDrawUpdate", features);
   };
 
   return (
@@ -25,8 +25,8 @@ export function App() {
       <Map
         style="mapbox://styles/mapbox/streets-v9" // eslint-disable-line
         containerStyle={{
-          height: '600px',
-          width: '100vw'
+          height: "600px",
+          width: "100vw"
         }}
       >
         <DrawControl onDrawCreate={onDrawCreate} onDrawUpdate={onDrawUpdate} />
