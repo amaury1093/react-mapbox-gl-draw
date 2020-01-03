@@ -64,6 +64,8 @@ Here are the props you can pass to `<DrawControl />`:
 - `defaultMode`, String (default: `'simple_select'`): the mode (from `modes`) that user will first land in.
 - `userProperties`, boolean (default: `false`): properties of a feature will also be available for styling and prefixed with `user_`, e.g., `['==', 'user_custom_label', 'Example']`
 
+Also see the API reference for [`mapbox-gl-draw`](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/API.md).
+
 ### Draw Events passed as props
 
 These additional props are functions that receive the event data, see [mapbox-gl-draw documentantion](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/API.md).
