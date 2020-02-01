@@ -5613,9 +5613,9 @@ react-is@^16.8.1:
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
 react-mapbox-gl@^4.8.1:
-  version "4.8.1"
-  resolved "https://registry.yarnpkg.com/react-mapbox-gl/-/react-mapbox-gl-4.8.1.tgz#5e3c865e24763e8d80a1931956ba49ea6245c598"
-  integrity sha512-2r718edwLCDzpKib/laMhqXgznXyVAf2nvzeNAUGTsDhQf753yT5u7v2TWlzKorHHvp0Pbdm0gmJ8piVi1cBvw==
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/react-mapbox-gl/-/react-mapbox-gl-4.8.2.tgz#3814a42d35adc53194d3920eeac72910dbcebd65"
+  integrity sha512-NAN1dgVDpjxTtqQuhPX1OUkVhS1o8KJ+jRoAN0Q/8gSWLaQlYLkC1ZOYRRj8KcoRP3Px/ya0DJsORiStz0P+eA==
   dependencies:
     "@turf/bbox" "4.7.3"
     "@turf/helpers" "4.7.3"
