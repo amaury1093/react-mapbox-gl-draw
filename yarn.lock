@@ -958,9 +958,9 @@
   integrity sha512-8+KAKzEvSUdeo+kmqnKrqgeE+LcA0tjYWFY7RPProVYwnqDjukzO+3b6dLD56rYX5TdWejnEOLJYOIeh4CXKuA==
 
 "@types/mapbox-gl@^1.6.1":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@types/mapbox-gl/-/mapbox-gl-1.7.0.tgz#1ac5488d0c24decc362a42a950caa456f63cc12d"
-  integrity sha512-XMri+Sumi1Np6p5hCpC76hA+gLU1R9fyFmDaTMZbxVODW5hvo3wjI0+ep3K8Ra1R/5A7IFxidJqonUtYwzZdFA==
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@types/mapbox-gl/-/mapbox-gl-1.8.0.tgz#b4df87a58f643500f8bc7b2807afbeb2ab114e07"
+  integrity sha512-XKgJRK8Z2gWRx2WeqQcBMaiplrgxnFgoE3IYQ7tf/cCMJ8iXJsMig2eTG0plo1H1yA09f47dPVwbBmoAVCcQHg==
   dependencies:
     "@types/geojson" "*"
 
