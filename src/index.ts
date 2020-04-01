@@ -48,7 +48,7 @@ export default class DrawControl extends React.Component<DrawControlProps> {
   static contextType = MapContext;
 
   static defaultProps = {
-    position: 'top-left'
+    position: 'top-left',
   };
 
   context!: React.ContextType<typeof MapContext>; // http://bit.ly/typescript-and-react-context
@@ -74,7 +74,7 @@ export default class DrawControl extends React.Component<DrawControlProps> {
       onDrawSelectionChange,
       onDrawUncombine,
       onDrawUpdate,
-      position
+      position,
     } = this.props;
 
     // Define a new Draw Control
@@ -82,8 +82,8 @@ export default class DrawControl extends React.Component<DrawControlProps> {
       ...this.props,
       modes: {
         ...MapboxDraw.modes,
-        ...modes
-      }
+        ...modes,
+      },
     });
 
     // Add it to our map
