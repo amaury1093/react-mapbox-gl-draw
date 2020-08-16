@@ -24,7 +24,7 @@ export interface DrawControlProps {
     combine_features: boolean;
     uncombine_features: boolean;
   }>;
-  default_mode?: string;
+  defaultMode?: string;
   displayControlsDefault?: boolean;
   keybindings?: boolean;
   modes?: object;
