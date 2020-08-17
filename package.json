@@ -38,7 +38,7 @@
     "react-dom": "^16.12.0",
     "react-mapbox-gl": "^4.8.1",
     "rimraf": "^3.0.0",
-    "standard-version": "^8.0.0",
+    "standard-version": "^9.0.0",
     "style-loader": "^1.1.2",
     "typescript": "^3.7.4",
     "webpack": "^4.41.5",
