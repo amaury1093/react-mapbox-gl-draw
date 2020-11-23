@@ -1147,9 +1147,9 @@
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
 "@types/mapbox-gl@^1.6.1":
-  version "1.12.7"
-  resolved "https://registry.yarnpkg.com/@types/mapbox-gl/-/mapbox-gl-1.12.7.tgz#f72835b0a7e7d4f97acf5f6e2d373ef0a1cd9e40"
-  integrity sha512-4/d4a16kEXBH4GoSRqpbpEJJoeEb+YXdd69E5ZMT45k6un7cjUn6lKWYNrJgsKEaSl7vkPuCOFk6DWOLxlzQ7A==
+  version "1.12.8"
+  resolved "https://registry.yarnpkg.com/@types/mapbox-gl/-/mapbox-gl-1.12.8.tgz#9bde714419d1212ea0f35a0af7ebf76c6327514e"
+  integrity sha512-a/FCVFr/i43dVl9M+PUVeuoG9IH5H1TfXWGcGoeyXgsdgDHmM6dI5u5CabW2GVu97hMQ64gbeR5N3jZ5sqWaMw==
   dependencies:
     "@types/geojson" "*"
 
