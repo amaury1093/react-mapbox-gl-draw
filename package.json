@@ -20,7 +20,7 @@
   "types": "lib/index.d.ts",
   "peerDependencies": {
     "@mapbox/mapbox-gl-draw": "^1.1.2",
-    "@types/mapbox-gl": "^1.6.1",
+    "@types/mapbox-gl": "^2.0.0",
     "react-mapbox-gl": "^5.0.0"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.7.4",
     "@mapbox/mapbox-gl-draw": "^1.1.2",
-    "@types/mapbox-gl": "^1.6.1",
+    "@types/mapbox-gl": "^2.0.0",
     "@types/react": "^17.0.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^5.0.0",
