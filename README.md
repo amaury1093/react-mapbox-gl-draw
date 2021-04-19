@@ -1,10 +1,9 @@
 # react-mapbox-gl-draw
 
-[![Actions Status](https://github.com/amaurymartiny/react-mapbox-gl-draw/workflows/pr/badge.svg)](https://github.com/amaurymartiny/react-mapbox-gl-draw/actions)
+[![Actions Status](https://github.com/amaurym/react-mapbox-gl-draw/workflows/pr/badge.svg)](https://github.com/amaurym/react-mapbox-gl-draw/actions)
 [![npm](https://img.shields.io/npm/v/react-mapbox-gl-draw.svg)](https://www.npmjs.com/package/react-mapbox-gl-draw)
 [![npm](https://img.shields.io/npm/dw/react-mapbox-gl-draw.svg)](https://www.npmjs.com/package/react-mapbox-gl-draw)
-[![dependencies Status](https://david-dm.org/amaurymartiny/react-mapbox-gl-draw/status.svg)](https://david-dm.org/amaurymartiny/react-mapbox-gl-draw)
-[![](https://img.shields.io/badge/Buy%20me%20a%20tree-%F0%9F%8C%B3-lightgreen)](https://offset.earth/amaurymartiny)
+[![dependencies Status](https://david-dm.org/amaurym/react-mapbox-gl-draw/status.svg)](https://david-dm.org/amaurym/react-mapbox-gl-draw)
 
 Draw tools for Mapbox with React: 🗺️ react-mapbox-gl + 🖌️ mapbox-gl-draw
 
@@ -23,7 +22,7 @@ yarn add react-mapbox-gl mapbox-gl @mapbox/mapbox-gl-draw # required peer depend
 yarn add react-mapbox-gl-draw
 ```
 
-> Note: this version of `react-mapbox-gl-draw` will only work with the latest `react-mapbox-gl@^4.4.0`. If you wish to use Draw tools with `react-mapbox-gl@2.x.x` or `react-mapbox-gl@v3.x.x`, please use [`react-mapbox-gl-draw@1.0.6`](https://github.com/amaurymartiny/react-mapbox-gl-draw/tree/v1.0.6).
+> Note: this version of `react-mapbox-gl-draw` will only work with the latest `react-mapbox-gl@^4.4.0`. If you wish to use Draw tools with `react-mapbox-gl@2.x.x` or `react-mapbox-gl@v3.x.x`, please use [`react-mapbox-gl-draw@1.0.6`](https://github.com/amaurym/react-mapbox-gl-draw/tree/v1.0.6).
 
 ```javascript
 import ReactMapboxGl from 'react-mapbox-gl';
@@ -33,18 +32,18 @@ import DrawControl from 'react-mapbox-gl-draw';
 import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
 
 const Map = ReactMapboxGl({
-  accessToken:
-    'pk.eyJ1IjoiZmFrZXVzZXJnaXRodWIiLCJhIjoiY2pwOGlneGI4MDNnaDN1c2J0eW5zb2ZiNyJ9.mALv0tCpbYUPtzT7YysA2g'
+	accessToken:
+		'pk.eyJ1IjoiZmFrZXVzZXJnaXRodWIiLCJhIjoiY2pwOGlneGI4MDNnaDN1c2J0eW5zb2ZiNyJ9.mALv0tCpbYUPtzT7YysA2g',
 });
 
 <Map
-  style="mapbox://styles/mapbox/streets-v9"
-  containerStyle={{
-    height: '100vh',
-    width: '100vw'
-  }}
+	style="mapbox://styles/mapbox/streets-v9"
+	containerStyle={{
+		height: '100vh',
+		width: '100vw',
+	}}
 >
-  <DrawControl />
+	<DrawControl />
 </Map>;
 ```
 
@@ -52,17 +51,17 @@ const Map = ReactMapboxGl({
 
 Here are the props you can pass to `<DrawControl />`:
 
-- `keybindings`, boolean (default `true`): Whether or not to enable keyboard interactions for drawing.
-- `touchEnabled`, boolean (default `true`): Whether or not to enable touch interactions for drawing.
-- `boxSelect`, boolean (default `true`): Whether or not to enable box selection of features with `shift`+`click`+drag. If `false`, `shift`+`click`+drag zooms into an area.
-- `clickBuffer`, number (default: `2`): Number of pixels around any feature or vertex (in every direction) that will respond to a click.
-- `touchBuffer`, number (default: `25`): Number of pixels around any feature of vertex (in every direction) that will respond to a touch.
-- `controls`, Object: Hide or show individual controls. Each property's name is a control, and value is a boolean indicating whether the control is on or off. Available control names are `point`, `line_string`, `polygon`, `trash`, `combine_features` and `uncombine_features`. By default, all controls are on. To change that default, use `displayControlsDefault`.
-- `displayControlsDefault`, boolean (default: `true`): The default value for `controls`. For example, if you would like all controls to be _off_ by default, and specify a whitelist with `controls`, use `displayControlsDefault: false`.
-- `styles`, Array\<Object\>: An array of map style objects. By default, Draw provides a map style for you. To learn about overriding styles, see the [Styling Draw](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/API.md#styling-draw) section below.
-- `modes`, Object: over ride the default modes with your own. `MapboxDraw.modes` can be used to see the default values. More information on custom modes [can be found here](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/MODES.md).
-- `defaultMode`, String (default: `'simple_select'`): the mode (from `modes`) that user will first land in.
-- `userProperties`, boolean (default: `false`): properties of a feature will also be available for styling and prefixed with `user_`, e.g., `['==', 'user_custom_label', 'Example']`
+-   `keybindings`, boolean (default `true`): Whether or not to enable keyboard interactions for drawing.
+-   `touchEnabled`, boolean (default `true`): Whether or not to enable touch interactions for drawing.
+-   `boxSelect`, boolean (default `true`): Whether or not to enable box selection of features with `shift`+`click`+drag. If `false`, `shift`+`click`+drag zooms into an area.
+-   `clickBuffer`, number (default: `2`): Number of pixels around any feature or vertex (in every direction) that will respond to a click.
+-   `touchBuffer`, number (default: `25`): Number of pixels around any feature of vertex (in every direction) that will respond to a touch.
+-   `controls`, Object: Hide or show individual controls. Each property's name is a control, and value is a boolean indicating whether the control is on or off. Available control names are `point`, `line_string`, `polygon`, `trash`, `combine_features` and `uncombine_features`. By default, all controls are on. To change that default, use `displayControlsDefault`.
+-   `displayControlsDefault`, boolean (default: `true`): The default value for `controls`. For example, if you would like all controls to be _off_ by default, and specify a whitelist with `controls`, use `displayControlsDefault: false`.
+-   `styles`, Array\<Object\>: An array of map style objects. By default, Draw provides a map style for you. To learn about overriding styles, see the [Styling Draw](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/API.md#styling-draw) section below.
+-   `modes`, Object: over ride the default modes with your own. `MapboxDraw.modes` can be used to see the default values. More information on custom modes [can be found here](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/MODES.md).
+-   `defaultMode`, String (default: `'simple_select'`): the mode (from `modes`) that user will first land in.
+-   `userProperties`, boolean (default: `false`): properties of a feature will also be available for styling and prefixed with `user_`, e.g., `['==', 'user_custom_label', 'Example']`
 
 Also see the API reference for [`mapbox-gl-draw`](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/API.md).
 
@@ -70,15 +69,15 @@ Also see the API reference for [`mapbox-gl-draw`](https://github.com/mapbox/mapb
 
 These additional props are functions that receive the event data, see [mapbox-gl-draw documentantion](https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/API.md).
 
-- `onDrawCreate`
-- `onDrawDelete`
-- `onDrawUpdate`
-- `onDrawCombine`
-- `onDrawUncombine`
-- `onDrawSelectionChange`
-- `onDrawModeChange`
-- `onDrawRender`
-- `onDrawActionable`
+-   `onDrawCreate`
+-   `onDrawDelete`
+-   `onDrawUpdate`
+-   `onDrawCombine`
+-   `onDrawUncombine`
+-   `onDrawSelectionChange`
+-   `onDrawModeChange`
+-   `onDrawRender`
+-   `onDrawActionable`
 
 To learn more about `mapbox-gl-draw`: https://github.com/mapbox/mapbox-gl-draw/blob/master/docs/API.md
 
@@ -114,4 +113,4 @@ The example app should run on `localhost:8080`. An online demo is also hosted on
 
 ## Testing
 
-Only `eslint` is run for linting. Proper testing needs to be added, see [#19](https://github.com/amaurymartiny/react-mapbox-gl-draw/issues/19) if you would like to help.
+Only `eslint` is run for linting. Proper testing needs to be added, see [#19](https://github.com/amaurym/react-mapbox-gl-draw/issues/19) if you would like to help.

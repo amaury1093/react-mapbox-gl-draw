@@ -4,7 +4,7 @@ import * as React from 'react';
 import { MapContext } from 'react-mapbox-gl';
 
 function noop(): void {
-  /* do nothing */
+	/* do nothing */
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -14,106 +14,108 @@ type DrawHandler = (event: any) => void;
  * User-facing props passed to <DrawControl />
  */
 export interface DrawControlProps {
-  boxSelect?: boolean;
-  clickBuffer?: number;
-  controls?: Partial<{
-    point: boolean;
-    line_string: boolean;
-    polygon: boolean;
-    trash: boolean;
-    combine_features: boolean;
-    uncombine_features: boolean;
-  }>;
-  defaultMode?: string;
-  displayControlsDefault?: boolean;
-  keybindings?: boolean;
-  modes?: object;
-  onDrawActionable?: DrawHandler;
-  onDrawCombine?: DrawHandler;
-  onDrawCreate?: DrawHandler;
-  onDrawDelete?: DrawHandler;
-  onDrawModeChange?: DrawHandler;
-  onDrawRender?: DrawHandler;
-  onDrawSelectionChange?: DrawHandler;
-  onDrawUncombine?: DrawHandler;
-  onDrawUpdate?: DrawHandler;
-  position?: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
-  touchBuffer?: number;
-  touchEnabled?: boolean;
-  userProperties?: boolean;
-  styles?: object[];
+	boxSelect?: boolean;
+	clickBuffer?: number;
+	controls?: Partial<{
+		point: boolean;
+		line_string: boolean;
+		polygon: boolean;
+		trash: boolean;
+		combine_features: boolean;
+		uncombine_features: boolean;
+	}>;
+	defaultMode?: string;
+	displayControlsDefault?: boolean;
+	keybindings?: boolean;
+	modes?: object; // eslint-disable-line @typescript-eslint/ban-types
+	onDrawActionable?: DrawHandler;
+	onDrawCombine?: DrawHandler;
+	onDrawCreate?: DrawHandler;
+	onDrawDelete?: DrawHandler;
+	onDrawModeChange?: DrawHandler;
+	onDrawRender?: DrawHandler;
+	onDrawSelectionChange?: DrawHandler;
+	onDrawUncombine?: DrawHandler;
+	onDrawUpdate?: DrawHandler;
+	position?: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
+	touchBuffer?: number;
+	touchEnabled?: boolean;
+	userProperties?: boolean;
+	styles?: object[]; // eslint-disable-line @typescript-eslint/ban-types
 }
 
 export default class DrawControl extends React.Component<DrawControlProps> {
-  static contextType = MapContext;
+	static contextType = MapContext;
 
-  static defaultProps = {
-    position: 'top-left',
-  };
+	static defaultProps = {
+		position: 'top-left',
+	};
 
-  context!: React.ContextType<typeof MapContext>; // http://bit.ly/typescript-and-react-context
+	context!: React.ContextType<typeof MapContext>; // http://bit.ly/typescript-and-react-context
 
-  draw?: Control;
+	draw?: Control;
 
-  componentDidMount(): void {
-    const map = this.context;
-    // The map needs to be passed in the React Context, or welse we can't do
-    // anything.
-    if (!map || !map.getStyle()) {
-      throw new Error('Map is undefined in React context.');
-    }
+	componentDidMount(): void {
+		const map = this.context;
+		// The map needs to be passed in the React Context, or welse we can't do
+		// anything.
+		if (!map || !map.getStyle()) {
+			throw new Error('Map is undefined in React context.');
+		}
 
-    const {
-      modes,
-      onDrawActionable,
-      onDrawCombine,
-      onDrawCreate,
-      onDrawDelete,
-      onDrawModeChange,
-      onDrawRender,
-      onDrawSelectionChange,
-      onDrawUncombine,
-      onDrawUpdate,
-      position,
-    } = this.props;
+		const {
+			modes,
+			onDrawActionable,
+			onDrawCombine,
+			onDrawCreate,
+			onDrawDelete,
+			onDrawModeChange,
+			onDrawRender,
+			onDrawSelectionChange,
+			onDrawUncombine,
+			onDrawUpdate,
+			position,
+		} = this.props;
 
-    // Define a new Draw Control
-    this.draw = new MapboxDraw({
-      ...this.props,
-      modes: {
-        ...MapboxDraw.modes,
-        ...modes,
-      },
-    });
+		// Define a new Draw Control
+		// eslint-disable-next-line
+		this.draw = new MapboxDraw({
+			...this.props,
+			// eslint-disable-next-line
+			modes: {
+				...MapboxDraw.modes, // eslint-disable-line
+				...modes,
+			},
+		});
 
-    // Add it to our map
-    map.addControl(this.draw as Control, position);
+		// Add it to our map
+		map.addControl(this.draw as Control, position);
 
-    // Hook draw events
-    map.on('draw.actionable', onDrawActionable || noop);
-    map.on('draw.combine', onDrawCombine || noop);
-    map.on('draw.create', onDrawCreate || noop);
-    map.on('draw.delete', onDrawDelete || noop);
-    map.on('draw.modechange', onDrawModeChange || noop);
-    map.on('draw.render', onDrawRender || noop);
-    map.on('draw.selectionchange', onDrawSelectionChange || noop);
-    map.on('draw.uncombine', onDrawUncombine || noop);
-    map.on('draw.update', onDrawUpdate || noop);
-  }
+		// Hook draw events
+		map.on('draw.actionable', onDrawActionable || noop);
+		map.on('draw.combine', onDrawCombine || noop);
+		map.on('draw.create', onDrawCreate || noop);
+		map.on('draw.delete', onDrawDelete || noop);
+		map.on('draw.modechange', onDrawModeChange || noop);
+		map.on('draw.render', onDrawRender || noop);
+		map.on('draw.selectionchange', onDrawSelectionChange || noop);
+		map.on('draw.uncombine', onDrawUncombine || noop);
+		map.on('draw.update', onDrawUpdate || noop);
+	}
 
-  componentWillUnmount(): void {
-    const map = this.context;
-    if (!map || !map.getStyle()) {
-      return;
-    }
+	componentWillUnmount(): void {
+		const map = this.context;
+		if (!map || !map.getStyle()) {
+			return;
+		}
 
-    if (!this.draw) {
-      return;
-    }
-    map.removeControl(this.draw);
-  }
+		if (!this.draw) {
+			return;
+		}
+		map.removeControl(this.draw);
+	}
 
-  render(): null {
-    return null;
-  }
+	render(): null {
+		return null;
+	}
 }
