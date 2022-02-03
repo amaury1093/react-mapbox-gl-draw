@@ -55,6 +55,8 @@ export default class DrawControl extends React.Component<DrawControlProps> {
 
 	draw?: Control;
 
+	cleaner = noop;
+
 	componentDidMount(): void {
 		const map = this.context;
 		// The map needs to be passed in the React Context, or welse we can't do
@@ -101,6 +103,23 @@ export default class DrawControl extends React.Component<DrawControlProps> {
 		map.on('draw.selectionchange', onDrawSelectionChange || noop);
 		map.on('draw.uncombine', onDrawUncombine || noop);
 		map.on('draw.update', onDrawUpdate || noop);
+
+		this.cleaner = ()=>{
+			try {
+				map.off('draw.actionable', onDrawActionable || noop);
+				map.off('draw.combine', onDrawCombine || noop);
+				map.off('draw.create', onDrawCreate || noop);
+				map.off('draw.delete', onDrawDelete || noop);
+				map.off('draw.modechange', onDrawModeChange || noop);
+				map.off('draw.render', onDrawRender || noop);
+				map.off('draw.selectionchange', onDrawSelectionChange || noop);
+				map.off('draw.uncombine', onDrawUncombine || noop);
+				map.off('draw.update', onDrawUpdate || noop);
+			} catch (error) {
+				console.error("clean event error")
+			}
+	
+		}
 	}
 
 	componentWillUnmount(): void {
@@ -112,6 +131,8 @@ export default class DrawControl extends React.Component<DrawControlProps> {
 		if (!this.draw) {
 			return;
 		}
+
+		this.cleaner()
 		map.removeControl(this.draw);
 	}
 
