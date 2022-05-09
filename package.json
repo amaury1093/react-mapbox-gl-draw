@@ -30,7 +30,7 @@
 		"@babel/preset-react": "^7.7.4",
 		"@mapbox/mapbox-gl-draw": "^1.1.2",
 		"@types/mapbox-gl": "^2.0.0",
-		"@types/react": "^17.0.0",
+		"@types/react": "^18.0.9",
 		"babel-loader": "^8.0.6",
 		"css-loader": "^6.2.0",
 		"mapbox-gl": "^1.6.1",
