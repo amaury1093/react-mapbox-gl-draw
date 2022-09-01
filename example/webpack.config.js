@@ -14,9 +14,9 @@ module.exports = {
       }
     ]
   },
-  node: {
-    fs: 'empty' // https://github.com/mapbox/mapbox-gl-draw/issues/626
-  },
+  // node: {
+  //   fs: 'empty' // https://github.com/mapbox/mapbox-gl-draw/issues/626
+  // },
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
