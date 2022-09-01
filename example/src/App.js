@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactMapboxGl from 'react-mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
 
 import DrawControl from '../../lib';

@@ -1,0 +1,52 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.177.0/containers/typescript-node
+{
+	"name": "Node.js & TypeScript",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick a Node version: 12, 14, 16
+		"args": {
+			"VARIANT": "16"
+		}
+	},
+	// Set the CHOKIDAR_USEPOLLING to true to enable polling for changes
+	// of files and subsequent automatic to recompilation.
+	// See: https://stackoverflow.com/a/44643246/1288109
+	"containerEnv": {
+		"CHOKIDAR_USEPOLLING": "true"
+	},
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"terminal.integrated.defaultProfile.linux": "zsh",
+		"terminal.integrated.profiles.linux": {
+			"bash": {
+				"path": "/usr/bin/flatpak-spawn",
+				"args": [
+					"--host",
+					"--env=TERM=xterm-256color",
+					"bash"
+				]
+			}
+		}
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"eamodio.gitlens"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [3000],
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "node",
+	
+	// See: https://code.visualstudio.com/docs/remote/containers-advanced
+	"mounts": [
+		"source=react-mapbox-gl-draw-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+	],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "sudo chown node ${containerWorkspaceFolder}/node_modules && git config --global oh-my-zsh.hide-info 1 && git config --global oh-my-zsh.hide-status 1 && git config --global oh-my-zsh.hide-dirty 1"
+}
