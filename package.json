@@ -13,7 +13,7 @@
 		"prebuild": "rimraf lib/",
 		"build": "tsc",
 		"deploy": "yarn build && standard-version",
-		"example": "yarn build && cd example && webpack-dev-server",
+		"example": "yarn build && cd example && webpack serve",
 		"lint": "tsc --noEmit && eslint . --ext ts",
 		"test": "echo skipped for now."
 	},
