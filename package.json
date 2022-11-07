@@ -31,7 +31,7 @@
 		"@mapbox/mapbox-gl-draw": "^1.1.2",
 		"@types/mapbox-gl": "^2.0.0",
 		"@types/react": "^17.0.0",
-		"babel-loader": "^8.0.6",
+		"babel-loader": "^9.1.0",
 		"css-loader": "^6.2.0",
 		"mapbox-gl": "^1.6.1",
 		"react": "^16.12.0",
